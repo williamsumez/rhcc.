@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>church website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav li { display: inline-block;
+margin-right: 20px;
+}
+nav a {color: #fff;
+text-decoration: none;}
+main{ display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;}
+section { background-color: #f7f7f7;
+padding: 20px;
+margin-bottom: 20px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+h1,h2 { color: #333;
+margin-bottom: 10px;}
+button { background-color: #4CAF50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;}
+button:hover { background-color: #3e8e41;}
+form { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid#ccc;
+    border-radius: 5px;
+}
+input[type="submit"]:hover { background-color: #3e8e41;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}  
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html">home</a>
+                </li>
+                <li><a href="./page1.html">About</a></li>
+                <li><a href="#"></a>Ministries</li>
+                <li><a href="./page2.html">Events</a></li>
+                <li><a href="./page3.html">sermons</a></li>
+                <li><a href="./page4.html">contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Welcome to our church</h1>
+            <p>we welcome you to our church righteousness and holiness in christ church <br>
+            come and be blessed</p>
+            <button id="my button">learn more</button>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>when ever you are in the presence of God there is liberty</p>
+        </section>
+        <section id="ministries">
+            <h2>ministries</h2>
+            <ul>
+                <li>ministry 1</li>
+                <li>ministry 2</li>
+                <li>ministry 3</li>
+            </ul>
+        </section>
+        <section id="Events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Event 1</li>
+                <li>Event 2</li>
+                <li>Event 3</li>
+                <li>click on Event to see all events</li>
+            </ul>
+        </section>
+        <section id="sermons">
+            <h2>Recent sermon</h2>
+            <ul>
+                <li>SERMON 1</li>
+                <li>sermon2</li>
+                <li>sermon 3</li>
+                <li>click on sermon to get all sermons</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Get in Touch with the pastor by clicking contact</h2>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy;2023/2024 church website</p>
+    </footer>
+    
+    <script>
+         // Get the navigation buttons 
+         let navButtons = document.querySelectorAll('.nav button');
+        //Add an Event listener to each button 
+        navButtons.forEach((button)=> {button.addEventlistenner('click',(e)=>{ 
+            // Get the button target page or section
+            let target =
+            button.getAttribute('data-target');
+            //Redirect to the target page or section
+            window.location.href = target;
+        })
+    
+    </script>
+    
+</body>
+</html>
